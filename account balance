@@ -1,1 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int acc_balance=sc.nextInt();
+        int op=sc.nextInt();
+        if(op==1){
+            int amount=sc.nextInt();
+            int a=acc_balance+amount;
+            System.out.println(a);
+        }
+        else if(op==2){
+            int w_amount=sc.nextInt();
+            if(w_amount<acc_balance){
+                int b=acc_balance-w_amount;
+                System.out.println(b);
+            }
+            else{
+                System.out.println("Insufficient Balance");
+            }
+        }
+        else{
+            System.out.println("Invalid Input");
+        }
+    }
+}
