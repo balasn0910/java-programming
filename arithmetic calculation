@@ -1,1 +1,49 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt(),b=sc.nextInt();
+        char ch=sc.next().charAt(0);
+        switch(ch){
+            case '+':
+                float c=(float)a+b;
+                System.out.println("Addition of two number is "+c);
+                break;
+            case '-':
+                float d=(float)a-b;
+                System.out.println("Subtraction of two number is "+d);
+                break;
+            case '*':
+                float g=(float)a*b;
+                System.out.println("Multiplication of two number is "+g);
+                break;
+            case '/':
+                if(b<0){
+                    System.out.println("not");
+                }
+                else{
+                float e=(float)a/b;
+                System.out.println("Division of two number is "+e);
+                }
+                break;
+            case '%':
+                if(b<0){
+                    System.out.println("not");
+                }
+                else{
+                float f=(float)a%b;
+                System.out.println("Modulo of two number is "+f);
+                }
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+    }
+}
