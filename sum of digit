@@ -1,1 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+         int a=sc.nextInt();
+         if(a<100){
+            System.out.println("Invalid Input");
+         }
+        else
+        {
+            int sum=0;
+            int n1=a;
+        while(a!=0){
+            int rem=a%10;
+            sum+=rem;
+            a/=10;
+        }
+            System.out.println("Sum of digit is "+sum);
+        }
+    }
+}
