@@ -1,1 +1,23 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int n = new Scanner(System.in).nextInt();
+
+        for (int i = 1; i <= n * 2 - 1; i++) {
+            int line = i <= n ? i : 2 * n - i;
+            for (int s = 0; s < n - line; s++) System.out.print(" ");
+            for (int j = 0; j < line; j++) {
+                System.out.print((char) ('A' + j));
+                if (j < line - 1) System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
